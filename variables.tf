@@ -1,13 +1,16 @@
-variable "domain_name" {
-  type        = string
-  description = "The domain name for the website."
+# Define variables for reusability and easy configuration
+variable "aws_region" {
+  default = "ca-central-1"
 }
 
 variable "bucket_name" {
-  type        = string
-  description = "The name of the bucket. Normally domain_name."
+  default = "my-static-website-bucket-67543"
 }
 
-variable "common_tags" {
-  description = "Common tags you want applied to all components."
+variable "website_index_document" {
+  default = "index.html"
+}
+
+variable "website_error_document" {
+  default = "error.html"
 }
