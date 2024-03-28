@@ -1,7 +1,6 @@
 # Create S3 bucket to hold the website
 resource "aws_s3_bucket" "website_bucket" {
   bucket = var.bucket_name
-  acl    = "private"
 }
 
 # Upload index.html to S3 bucket
